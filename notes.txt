@@ -1,0 +1,43 @@
+
+Some simple notes taken while watching and coding along. 
+
+Typography component handles what would normally by handled by paragraph, h1, h2 tags etc..
+Instead just use a Typography comonent and customize it and specify tag.
+
+  Variant prop is used to specify the look of the tag.
+  component prop is used to specify the actual tag that gets outputted.
+
+ButtonGroup creates buttons intended to fit next to one another
+All styles applied to single ButtonGroup component are applied
+to the children.
+
+Container is wrapper around content that applies margin and padding around content
+
+
+Sometimes you want to tweak something with css.  To do this we
+use the makeStyles hook.  This hook gives access to the styles
+applied to the react component (although the ).
+
+
+Theme in material ui is like giant object with all of the different properties and values
+to specify primary and second colors, how big h1 typography variant should be, etc..
+
+Can create your own theme to override the values.  Don't have to change everything from
+the default theme, can simply override what you want. 
+
+Theme component wraps the entire app so that all the child components have access
+to the theme attributes.
+
+Json server - wraps a json file with REST api end points
+  Top level properties are seen as a resource (in our example it is notes). Super useful!
+
+
+Appbar is out of normal flow of document so we must use its height (actually 
+the height of the Toolbar inside it) to apply a height to a plain div so that the 
+following content doesn't end up underneath it.  We use a mixinto access the height 
+of the toolbar component. To do this we use the theme variable inside of the 
+makeStyles hook generator. 
+
+A mixin is basically a collection of styles used in material UI's components.
+Hence, theme.mixins.foo can allow us to apply the styles given to a MUI component
+to regular jsx elements.
